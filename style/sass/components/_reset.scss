@@ -1,0 +1,81 @@
+.fixed-header {
+  border-bottom: 1px solid #e6e6e6;
+}
+@include min-768 {
+  .fixed-header {
+    padding: 10px 0;
+    .logo img {
+      width: 160px;
+    }
+  }
+}
+
+// Reset language
+
+html[dir="ltr"] {
+  .main-title-div .normal,
+  .main-title-div .bolder {
+    line-height: 1.2;
+  }
+  .mySection-parent {
+    grid-template-columns: 265px 1fr 1fr;
+  }
+  .mySection .general-title{
+    line-height: 1.4;
+  }
+  .banner-desc {
+    width: 735px;
+  }
+  .about .para {
+    line-height: 30px;
+  }
+
+  @include max-1400{
+      .banner-desc {
+    width: 650px;
+  }
+  }
+  @include max-1200 {
+    .mySection-parent {
+      grid-template-columns: 245px 1fr 1fr;
+    }
+       .banner-desc {
+    width: 550px;
+  }
+}
+  @include max-992 {
+    .banner-desc {
+      width: 550px;
+    }
+    .mySection-parent {
+      grid-template-columns: 1fr 1fr;
+    }
+   
+  }
+  @include max-768 {
+     .mySection .general-title{
+      line-height: 1.4;
+    }
+    .quick-links ul li{
+      margin-bottom: 9px;
+    }
+    .mySection-parent {
+      grid-template-columns: 1fr;
+    }
+    .about .para {
+      line-height: 1.7;
+    }
+    .about-items .item .item-title {
+      line-height: 1.4;
+    }
+    .banner-desc {
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .download-btn {
+      padding-inline: 14px;
+      font-size: 13px;
+    }
+  }
+}

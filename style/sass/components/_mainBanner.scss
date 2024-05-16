@@ -1,0 +1,157 @@
+.mainBanner {
+  .mainslider-item {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.mainBanner {
+  .mainslider-item {
+    position: relative;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    z-index: 8;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: all linear 0.3s;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    .icon {
+      font-size: 20px;
+    }
+    &:hover {
+      background-color: #000;
+      .icon {
+        color: #fff;
+      }
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.banner-desc {
+  padding: 0 20px;
+  width: 525px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  inset-inline-start: 130px;
+  transform: translateY(-50%);
+
+}
+
+  .main-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .normal  {
+      text-transform: capitalize;
+    }
+    .normal , .bolder{
+      font-size: 48px;
+      line-height: 60px;
+      color: #ffffff;
+    }
+    .normal{
+      font-weight: 400;
+    }
+    .bolder{
+      font-weight: 800;
+    }
+  }
+
+.mainBanner {
+  figure {
+    position: relative;
+    margin: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba($color: #000, $alpha: 0.149);
+      z-index: 2;
+    }
+  }
+}
+
+.mainBanner {
+  .swiper-pagination {
+    z-index: 8;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    right: 50px;
+    left: unset;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    left: 50px;
+    right: unset;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+  }
+}
+
+@include max-992 {
+  .main-title-div  {
+    .normal , .bolder{
+       font-size: 35px;
+    }
+   
+  }
+  .banner-desc {
+    width: 480px;
+  }
+}
+
+@include max-768 {
+  .mainBanner {
+    .swiper-pagination {
+      bottom: 10px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  .banner-desc {
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    inset-inline-start: unset;
+  }
+.main-title-div {
+   align-items: center;
+  .normal , .bolder{
+     font-size: 25px;
+    line-height: normal;
+    text-align: center;
+   
+  }
+   
+  }
+  .mainBanner .mainslider-item img {
+    height: 250px;
+  }
+}
