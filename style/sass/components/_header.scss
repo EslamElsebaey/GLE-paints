@@ -81,7 +81,7 @@ header {
 .menu-item-has-children {
   position: relative;
   padding: 10px 0;
-  > a {
+  .item-anchor {
     column-gap: 3px;
     &::after {
       content: "\f078";
@@ -95,10 +95,10 @@ header {
     align-items: baseline;
   }
   &:hover {
-    > a {
+    .item-anchor {
       color: #89221c;
       &::after{
-        color: #89221c;
+        color: #89221c ;
       }
     }
     .sub-menu {
@@ -173,18 +173,16 @@ header {
 }
 
 @include max-992 {
-  .menu-item-has-children > a::after {
+  .menu-item-has-children .item-anchor::after {
     font-size: 14px;
     transition: linear transform 0.2s;
   }
-  .menu-item-has-children > a.icon-rotate::after {
+  .menu-item-has-children  .item-anchor.icon-rotate::after {
     transform: rotate(180deg);
   }
   .menu-item-has-children .sub-menu {
     position: static;
-    // row-gap: 15px;
     background-color: unset;
-   
     box-shadow: none;
     opacity: 1;
     visibility: visible;
@@ -259,7 +257,7 @@ header {
     align-items: flex-start;
     row-gap: 20px;
   }
-  .big-menu > li {
+  .menu-item-has-children {
     width: 100%;
   }
   .big-menu a:not(.sub-menu a){
@@ -314,9 +312,6 @@ header {
   }
 
   .menu-item-has-children {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-inline-end: 0;
     padding: 0;
   }
 }

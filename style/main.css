@@ -387,7 +387,7 @@ header {
   position: relative;
   padding: 10px 0;
 }
-.menu-item-has-children > a {
+.menu-item-has-children .item-anchor {
   -moz-column-gap: 3px;
        column-gap: 3px;
   position: relative;
@@ -395,16 +395,16 @@ header {
   justify-content: center;
   align-items: baseline;
 }
-.menu-item-has-children > a::after {
+.menu-item-has-children .item-anchor::after {
   content: "\f078";
   font-family: "Font Awesome 6 Pro";
   font-size: 10px;
   color: #000;
 }
-.menu-item-has-children:hover > a {
+.menu-item-has-children:hover .item-anchor {
   color: #89221c;
 }
-.menu-item-has-children:hover > a::after {
+.menu-item-has-children:hover .item-anchor::after {
   color: #89221c;
 }
 .menu-item-has-children:hover .sub-menu {
@@ -472,11 +472,11 @@ header {
   }
 }
 @media only screen and (max-width: 991px) {
-  .menu-item-has-children > a::after {
+  .menu-item-has-children .item-anchor::after {
     font-size: 14px;
     transition: linear transform 0.2s;
   }
-  .menu-item-has-children > a.icon-rotate::after {
+  .menu-item-has-children .item-anchor.icon-rotate::after {
     transform: rotate(180deg);
   }
   .menu-item-has-children .sub-menu {
@@ -555,7 +555,7 @@ header {
     align-items: flex-start;
     row-gap: 20px;
   }
-  .big-menu > li {
+  .menu-item-has-children {
     width: 100%;
   }
   .big-menu a:not(.sub-menu a) {
@@ -607,9 +607,6 @@ header {
     background-color: transparent;
   }
   .menu-item-has-children {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-inline-end: 0;
     padding: 0;
   }
 }

@@ -105,14 +105,14 @@ $(document).ready(function () {
   if ($(window).width() <= 992) {
     $(".menu-item-has-children").click(function () {
       $(this).children(".sub-menu").slideToggle(300);
-      $(this).children("a").toggleClass("icon-rotate");
+      $(this).children(".item-anchor").toggleClass("icon-rotate");
       $(".menu-item-has-children")
         .not($(this))
         .children(".sub-menu")
         .slideUp(300);
       $(".menu-item-has-children")
         .not($(this))
-        .children("a")
+        .children(".item-anchor")
         .removeClass("icon-rotate");
     });
   }
