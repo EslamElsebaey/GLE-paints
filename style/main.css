@@ -1246,9 +1246,21 @@ header {
   transform: translateY(-50%);
   top: 50%;
   transition: all linear 0.2s;
+  overflow: hidden;
 }
-.message .send:hover {
+.message .send::after {
+  content: "";
+  width: 0;
+  top: 0;
+  height: 100%;
   background-color: #89221c;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transition: all linear 0.2s;
+}
+.message .send:hover::after {
+  width: 100%;
 }
 .message input {
   width: 360px;
