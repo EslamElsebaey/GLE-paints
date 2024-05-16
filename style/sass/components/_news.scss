@@ -8,7 +8,7 @@
   }
   .myButton {
     padding-inline: 33px;
-    &:hover {
+    &::after{
       background-color: #3d328d;
     }
   }

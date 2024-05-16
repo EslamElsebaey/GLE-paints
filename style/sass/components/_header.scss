@@ -21,10 +21,9 @@ header {
   padding-inline: 23px;
   border-radius: 20px;
   font-size: 14px;
-
-  &:hover {
-    background-color: #89221c;
-  }
+  &::after{
+      background-color: #89221c;
+    }
 }
 
 .navigation {
@@ -49,19 +48,18 @@ header {
   justify-content: center;
   align-items: center;
   a:not(.sub-menu a) {
-      font-size: 14px;
-      color: #000000;
-      text-align: center;
-      text-transform: capitalize;
-      transition: all linear 0.2s;
-      position: relative;
-      &:hover {
-        text-decoration: none;
-        color: #89221c;
-      }
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all linear 0.2s;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+      color: #89221c;
     }
   }
-
+}
 
 .language-anchor {
   font-size: 12px;
@@ -97,8 +95,8 @@ header {
   &:hover {
     .item-anchor {
       color: #89221c;
-      &::after{
-        color: #89221c ;
+      &::after {
+        color: #89221c;
       }
     }
     .sub-menu {
@@ -177,7 +175,7 @@ header {
     font-size: 14px;
     transition: linear transform 0.2s;
   }
-  .menu-item-has-children  .item-anchor.icon-rotate::after {
+  .menu-item-has-children .item-anchor.icon-rotate::after {
     transform: rotate(180deg);
   }
   .menu-item-has-children .sub-menu {
@@ -192,7 +190,7 @@ header {
     transition: none;
     width: 100%;
     padding-top: 12px;
-     padding-inline-start: 8px;
+    padding-inline-start: 8px;
     li {
       margin-bottom: 15px;
     }
@@ -260,12 +258,12 @@ header {
   .menu-item-has-children {
     width: 100%;
   }
-  .big-menu a:not(.sub-menu a){
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 16px;
-      font-weight: 400;
+  .big-menu a:not(.sub-menu a) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
   }
 
   .close-lang-holder {

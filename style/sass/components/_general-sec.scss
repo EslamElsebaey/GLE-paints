@@ -9,7 +9,7 @@
 }
 .mySection {
   .myButton {
-    &:hover {
+    &::after{
       background-color: #18713a;
     }
   }

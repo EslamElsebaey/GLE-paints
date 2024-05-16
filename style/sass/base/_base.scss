@@ -114,6 +114,25 @@ button {
   color: #ffffff;
   font-weight: 700;
   transition: all ease-in-out 0.2s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #89221c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all linear .2s;
+  }
+  &:hover{
+    &::after{
+      width: 100%;
+    }
+  }
 }
 
 ::-webkit-scrollbar {
@@ -185,15 +204,28 @@ button {
   visibility: hidden;
   position: fixed;
   z-index: 10;
-  &:hover {
+  overflow: hidden;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
     background-color: #89221c;
+    z-index: -1;
+    transition: all linear .2s;
+  }
+  &:hover {
+    &::after{
+      height: 100%;
+    }
     .toTop-icon {
       color: #fff;
     }
   }
   .toTop-icon {
-    font-size: 14px;
-    color: #121d32;
+    font-size: 16px;
+    color: #808080;
     transition: all linear 0.2s;
   }
 }
@@ -226,6 +258,9 @@ button {
   .container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+  .toTop .toTop-icon{
+    font-size: 14px;
   }
   .anchor-holder {
     margin-top: 70px;

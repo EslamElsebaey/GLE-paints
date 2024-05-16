@@ -170,6 +170,23 @@ button:focus {
   color: #ffffff;
   font-weight: 700;
   transition: all ease-in-out 0.2s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.myButton::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #89221c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all linear 0.2s;
+}
+.myButton:hover::after {
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -235,16 +252,27 @@ button:focus {
   visibility: hidden;
   position: fixed;
   z-index: 10;
+  overflow: hidden;
 }
-.toTop:hover {
+.toTop::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
   background-color: #89221c;
+  z-index: -1;
+  transition: all linear 0.2s;
+}
+.toTop:hover::after {
+  height: 100%;
 }
 .toTop:hover .toTop-icon {
   color: #fff;
 }
 .toTop .toTop-icon {
-  font-size: 14px;
-  color: #121d32;
+  font-size: 16px;
+  color: #808080;
   transition: all linear 0.2s;
 }
 
@@ -273,6 +301,9 @@ button:focus {
   .container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+  .toTop .toTop-icon {
+    font-size: 14px;
   }
   .anchor-holder {
     margin-top: 70px;
@@ -325,7 +356,7 @@ header {
   border-radius: 20px;
   font-size: 14px;
 }
-.download-btn:hover {
+.download-btn::after {
   background-color: #89221c;
 }
 
@@ -854,7 +885,7 @@ header {
        column-gap: 30px;
 }
 
-.mySection .myButton:hover {
+.mySection .myButton::after {
   background-color: #18713a;
 }
 .mySection .general-title {
@@ -1061,7 +1092,7 @@ header {
 .news .myButton {
   padding-inline: 33px;
 }
-.news .myButton:hover {
+.news .myButton::after {
   background-color: #3d328d;
 }
 .news .general-title {
