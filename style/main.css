@@ -401,6 +401,12 @@ header {
   font-size: 10px;
   color: #000;
 }
+.menu-item-has-children:hover > a {
+  color: #89221c;
+}
+.menu-item-has-children:hover > a::after {
+  color: #89221c;
+}
 .menu-item-has-children:hover .sub-menu {
   transform: translateX(-50%) scale(1);
   opacity: 1;

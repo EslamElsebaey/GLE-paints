@@ -95,6 +95,12 @@ header {
     align-items: baseline;
   }
   &:hover {
+    > a {
+      color: #89221c;
+      &::after{
+        color: #89221c;
+      }
+    }
     .sub-menu {
       transform: translateX(-50%) scale(1);
       opacity: 1;
