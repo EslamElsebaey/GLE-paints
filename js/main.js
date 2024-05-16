@@ -8,7 +8,7 @@ $(document).ready(function () {
   const mainSwiper = new Swiper(".mainBanner .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 1000,
     navigation: {
       nextEl: " .mainBanner .swiper-button-next",
