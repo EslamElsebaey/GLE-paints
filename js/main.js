@@ -1,8 +1,6 @@
 $(window).on("load", function () {
   $(".preloader").fadeOut();
-});
 
-$(document).ready(function () {
   // main swiper
 
   const mainSwiper = new Swiper(".mainBanner .swiper", {
@@ -68,7 +66,9 @@ $(document).ready(function () {
       },
     });
   }
+});
 
+$(document).ready(function () {
   /**************************************************************************************************** */
 
   // open and close sideBar
