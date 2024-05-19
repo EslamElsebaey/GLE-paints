@@ -17,6 +17,9 @@ html[dir="ltr"] {
   .main-title-div .bolder {
     line-height: 1.2;
   }
+  .about-items{
+    width: 950px;
+  }
   .mySection-parent {
     grid-template-columns: 265px 1fr 1fr;
   }
@@ -44,6 +47,9 @@ html[dir="ltr"] {
   }
 }
   @include max-992 {
+      .about-items{
+    width: 100%;
+  }
     .banner-desc {
       width: 550px;
     }

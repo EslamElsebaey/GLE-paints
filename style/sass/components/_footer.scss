@@ -196,7 +196,7 @@
   .copyright {
     flex-direction: column;
     row-gap: 8px;
-    margin-top: 45px;
+    margin-top: 30px;
   }
   .footer-item {
     align-items: flex-start;
@@ -205,8 +205,7 @@
   .footer-items {
     flex-direction: column;
     .img-item {
-      order: 6;
-      margin: 20px auto 0 auto;
+      margin: 0 auto 35px auto;
     }
     .footer-item {
       width: 100%;

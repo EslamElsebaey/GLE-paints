@@ -16,7 +16,7 @@
 }
 
 .about-items {
-  width: 825px;
+  width: 900px;
   margin-inline: auto;
   display: flex;
   align-items: flex-start;
@@ -38,6 +38,9 @@
     .color-red {
       color: #89221c;
     }
+    .color-grey {
+      color: #59585a;
+    }
     .item-title {
       font-size: 18px;
       line-height: 30px;
@@ -57,7 +60,11 @@
 
 @include max-992 {
   .about-items {
+   display: grid;
+   grid-template-columns: repeat(2 , 1fr);
+    row-gap: 45px;
     width: 100%;
+     margin-inline: unset;
   }
 }
 
@@ -69,12 +76,12 @@
     padding: 50px 0;
   }
   .about-items {
-    justify-content: center;
+    column-gap: 30px;
     row-gap: 40px;
-    flex-wrap: wrap;
+   
+    // flex-wrap: wrap;
   }
   .about-items .item {
-    width: 50%;
     row-gap: 25px;
   }
   .about .para {
