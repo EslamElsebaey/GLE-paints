@@ -29,18 +29,6 @@
     .icon {
       font-size: 72px;
     }
-    .color-blue {
-      color: #3d328d;
-    }
-    .color-green {
-      color: #18713a;
-    }
-    .color-red {
-      color: #89221c;
-    }
-    .color-grey {
-      color: #59585a;
-    }
     .item-title {
       font-size: 18px;
       line-height: 30px;
@@ -49,6 +37,18 @@
       margin-bottom: 0;
       text-align: center;
     }
+  }
+  .item.color-blue .icon{
+    color: #3d328d;
+  }
+  .item.color-green .icon{
+    color: #18713a;
+  }
+  .item.color-grey .icon{
+    color: #59585a;
+  }
+  .item.color-red .icon{
+    color: #89221c;
   }
 }
 

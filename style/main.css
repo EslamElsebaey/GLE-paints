@@ -821,18 +821,6 @@ header {
 .about-items .item .icon {
   font-size: 72px;
 }
-.about-items .item .color-blue {
-  color: #3d328d;
-}
-.about-items .item .color-green {
-  color: #18713a;
-}
-.about-items .item .color-red {
-  color: #89221c;
-}
-.about-items .item .color-grey {
-  color: #59585a;
-}
 .about-items .item .item-title {
   font-size: 18px;
   line-height: 30px;
@@ -840,6 +828,18 @@ header {
   font-weight: 700;
   margin-bottom: 0;
   text-align: center;
+}
+.about-items .item.color-blue .icon {
+  color: #3d328d;
+}
+.about-items .item.color-green .icon {
+  color: #18713a;
+}
+.about-items .item.color-grey .icon {
+  color: #59585a;
+}
+.about-items .item.color-red .icon {
+  color: #89221c;
 }
 
 @media only screen and (max-width: 1199px) {
